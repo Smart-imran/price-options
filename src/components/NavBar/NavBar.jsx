@@ -1,7 +1,12 @@
+import { useState } from "react";
 import Link from "../DaisyNav/Link";
+import { IoMenu } from "react-icons/io5";
+import { AiOutlineClose } from "react-icons/ai";
 
 
 const NavBar = () => {
+
+    const [open, setOpen] = useState(false);
 
 
     const routes = [
@@ -15,7 +20,16 @@ const NavBar = () => {
 
     return (
         <nav>
-            <ul className="md:flex">
+            <div className="md:hidden text-2xl" onClick={()=>setOpen(!open)}>
+
+                {
+                    open === true ? <AiOutlineClose/> : <IoMenu/>
+                   
+                }
+
+               
+            </div>
+            <ul className="md:flex absolute bg-yellow-200">
                 {
                     routes.map(route => <Link key={route.id} route={route}></Link>)
                 }
