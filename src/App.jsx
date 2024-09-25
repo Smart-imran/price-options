@@ -2,6 +2,7 @@
 import './App.css'
 import NavBar from './components/NavBar/NavBar'
 import DaisyNav from './components/DaisyNav/DaisyNav'
+import PriceOptions from './components/PriceOptions/PriceOptions'
 
 function App() {
 
@@ -11,8 +12,9 @@ function App() {
       <NavBar></NavBar>
       {/* <DaisyNav></DaisyNav> */}
 
-      {/* <h1 className='text-4xl bg-rose-500'>Vite + React</h1> */}
+      <h1 className='text-4xl bg-rose-500'>Vite + React</h1>
       
+      <PriceOptions></PriceOptions>
       
      
 
