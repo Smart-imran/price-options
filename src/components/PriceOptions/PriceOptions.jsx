@@ -8,7 +8,7 @@ const PriceOptions = () => {
         {
             "id": 1,
             "name": "Basic Plan",
-            "price": "$29.99/month",
+            "price": "$29.99",
             "features": [
                 "Access to all gym equipment",
                 "1 group class per week",
@@ -18,7 +18,7 @@ const PriceOptions = () => {
         {
             "id": 2,
             "name": "Standard Plan",
-            "price": "$49.99/month",
+            "price": "$49.99",
             "features": [
                 "Access to all gym equipment",
                 "Unlimited group classes",
@@ -29,7 +29,7 @@ const PriceOptions = () => {
         {
             "id": 3,
             "name": "Premium Plan",
-            "price": "$69.99/month",
+            "price": "$69.99",
             "features": [
                 "Access to all gym equipment",
                 "Unlimited group classes",
@@ -38,32 +38,25 @@ const PriceOptions = () => {
                 "Access to exclusive premium areas"
             ]
         },
-        {
-            "id": 4,
-            "name": "VIP Plan",
-            "price": "$99.99/month",
-            "features": [
-                "24/7 access to the gym",
-                "Unlimited group classes",
-                "Personal trainer (twice a week)",
-                "Locker room, sauna, pool, and steam room access",
-                "Access to exclusive VIP lounge",
-                "Free sports drinks and towel service"
-            ]
-        }
+        
     ];
 
 
 
     return (
-        <div>
-             <h2 className="text-5xl">Best Price in the Town</h2>
-             {
-                priceOptions.map(option => <PriceOption  key={option.id}
-                
-                option={option}
-                ></PriceOption>)
-             }
+        <div className="m-12">
+            <h2 className="text-5xl text-center font-extrabold">Best Price in the Town</h2>
+            <br />
+
+            <div className="grid md:grid-cols-3 gap-6">
+                {
+
+                    priceOptions.map(option => <PriceOption key={option.id}
+
+                    option={option}
+                    ></PriceOption>)
+                }
+            </div>
         </div>
     );
 };

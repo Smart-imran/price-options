@@ -12,7 +12,7 @@ function App() {
       <NavBar></NavBar>
       {/* <DaisyNav></DaisyNav> */}
 
-      <h1 className='text-4xl bg-rose-500'>Vite + React</h1>
+      <h1 className='text-4xl bg-rose-500 text-center font-bold p-2'>Vite + React</h1>
       
       <PriceOptions></PriceOptions>
       
